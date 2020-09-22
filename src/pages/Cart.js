@@ -15,7 +15,7 @@ function Cart() {
     JSON.parse(localStorage.getItem('products')) || [];
 
   const cartItemElements = localStorageProducts.map((item) => {
-    return <CartItem item={item} key={item.id} />;
+    return <CartItem item={item} key={item.url} />;
   });
 
   const orderHandler = () => {

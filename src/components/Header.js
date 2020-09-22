@@ -1,9 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Context } from '../Context';
 
 function Header() {
   const { cartItems } = useContext(Context);
+  useEffect(() => {}, [cartItems]);
   const cartItemsLocalStorage =
     JSON.parse(localStorage.getItem('products')) || [];
 
